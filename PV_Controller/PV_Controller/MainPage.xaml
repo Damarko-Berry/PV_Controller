@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PV_Controller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button x:Name="Search" Clicked="Search_Clicked" Text="Scan"/>
+            <VerticalStackLayout x:Name="ControllerButtons" HorizontalOptions="Center">
+                <HorizontalStackLayout >
+
+                    <VerticalStackLayout Padding="30,0" Spacing="25">
+
+                        <Label
+                        Text="Channel"
+                        Style="{StaticResource Headline}"
+                        SemanticProperties.HeadingLevel="Level1" />
+
+                        <Button x:Name="NextChan" Text="+" Clicked="NextChan_Clicked"/>
+                        <Button x:Name="PrevChan" Text="-" Clicked="PrevChan_Clicked"/>
+
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Padding="30,0" Spacing="25">
+
+                        <Label
+                        Text="Volume"
+                        Style="{StaticResource Headline}"
+                        SemanticProperties.HeadingLevel="Level1" />
+
+                        <Button x:Name="VolumeUp" Text="+" Clicked="VolumeUp_Clicked"/>
+                        <Button x:Name="VulumeDown" Text="-" Clicked="VulumeDown_Clicked"/>
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+                <Button x:Name="Mute" Text="Mute" Clicked="Mute_Clicked"/>
+                <Picker x:Name="ClientList" HorizontalOptions="Center" SelectedIndexChanged="ClientList_SelectedIndexChanged"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
